@@ -1,4 +1,4 @@
-# Inforamción 
+# Información 
 
 Free template from [anegoie](https://github.com/aneagoie/portfo)
 
