@@ -4,10 +4,10 @@ remote_theme: pages-themes/slate@v0.2.0
 
 
 # title: oubina.github.io
-description: Mi portafolio
+# description: Mi portafolio
 
 github:
   # repository_name: oubina.github.io
   project_tagline: Mi demo portafolio
   home_url: ./_layouts/index.html
-  contact_url: ./_layouts/contact.html
+  another_url: ./_layouts/contact.html
