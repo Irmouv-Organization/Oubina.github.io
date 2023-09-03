@@ -7,6 +7,5 @@ description: Mi portafolio
 
 github:
   repository_name: oubina.github.io
-  owner_name: Gofer
   home_url: ./_layouts/index.html
   another_url: ./_layouts/contact.html
