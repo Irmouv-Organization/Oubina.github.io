@@ -6,7 +6,6 @@ layout: default
 
 Esta demo está construida con uno de los temas disponibles para la opción _Paginas_ de GitHub
 
-#
 
 
 ### Plantillas Disponibles
