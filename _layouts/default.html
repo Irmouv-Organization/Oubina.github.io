@@ -9,13 +9,21 @@
 
 {% seo %}
     {% include head-custom.html %}
+
+    <link href="./assets/main.3f6952e4.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="minimal">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
 
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
+          <nav class="navbar  navbar-fixed-top navbar-inverse">
+            <div class="container">
           {% if site.github.is_project_page %}
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
@@ -29,10 +37,41 @@
               <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
             </section>
           {% endif %}
+            </div>
+          </nav>
         </header>
     </div>
 
     <!-- MAIN CONTENT -->
+
+    <!-- Add your site or app content here -->
+  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./static/assets/images/space.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="hero-full-wrapper">
+            <div class="text-content">
+              <h1>Hola,<br>
+                <span id="typed-strings">
+                  <span>Soy Jose Oubiña</span>
+                  <span>Programador</span>
+                </span>
+                <span id="typed"></span>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+       type();
+       movingBackgroundImage();
+    });
+  </script>
+
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         {{ content }}
@@ -48,5 +87,6 @@
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+    <script type="text/javascript" src="./assets/main.70a66962.js"></script>
   </body>
 </html>
