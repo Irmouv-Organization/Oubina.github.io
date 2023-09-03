@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ site.lang | default: "es-ES" }}">
 
-<head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-icon-180x180.png">
-  <link href="./assets/images/favicon.ico" rel="icon">
+    {% seo %}
+    {% include head-custom.html %}
 
-  <title>Title page</title>  
+    <link href="/assets/main.3f6952e4.css" rel="stylesheet">
+  </head>
 
-<link href="/assets/main.3f6952e4.css" rel="stylesheet"></head>
-
-<body class="">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
+  <body class="minimal">
+    <div id="site-border-left"></div>
+    <div id="site-border-right"></div>
+    <div id="site-border-top"></div>
+    <div id="site-border-bottom"></div>
 
 <!-- HEADER -->
- <!-- Add your content of header -->
 <header>
   <nav class="navbar  navbar-fixed-top navbar-inverse">
     <div class="container">
-      {% if site.github.home_url %}
+      <!-- {% if site.github.home_url %}
         <a id="forkme_banner" href="index.html" title="">01 : Home</a>
       {% endif %}
 
       {% if site.github.another_url %}
       <a id="forkme_banner" href="contact.html"  title="">02 : Contact</a>
-      {% endif %}
+      {% endif %} -->
 
       <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
       <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
-     
+      <ul class="nav navbar-nav ">
+        <li> 
+              {% if site.github.home_url %}
+                <a href="index.html" title="">01 : Home</a>
+              {% endif %}
+        </li>
+        <li>
+              {% if site.github.another_url %}
+                <a href="contact.html"  title="">02 : Contact</a>
+              {% endif %}
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
@@ -58,9 +62,9 @@
 <!-- FOOTER  -->
 <div id="footer_wrap" class="outer">
   <footer class="inner">
-    <!-- {% if site.github.is_project_page %} -->
-    <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-    <!-- {% endif %} -->
+    {% if site.github.is_project_page %}
+    <p>{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+    {% endif %}
     <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
   </footer>
 </div>
