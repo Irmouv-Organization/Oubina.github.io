@@ -6,6 +6,4 @@ title: oubina.github.io
 description: Mi portafolio
 
 github:
-  home_url: ./_layouts/index.html
   another_url: ./_layouts/contact.html
-  footer:  © UNTITLED | Website created with 
